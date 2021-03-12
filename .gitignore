@@ -44,4 +44,5 @@ yarn.lock
 
 server/build/*
 **/notes*.md
+**/*.sqlite3
 
