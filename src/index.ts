@@ -8,7 +8,7 @@ const app = express();
 app.use(
   '/protected',
   jwt({
-    secret: 'very long json web token pass phrase (){}/=`12',
+    secret: process.env.JWT_PASS as string,
     algorithms: ['HS256'],
   }),
   (req, res) => {
@@ -24,6 +24,6 @@ app.use(
   })
 );
 
-app.listen(4000, () => {
-  console.log('Now listening on port 4000');
+app.listen(process.env.PORT, () => {
+  console.log(`Now listening on port ${process.env.PORT}`);
 });

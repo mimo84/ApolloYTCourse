@@ -46,3 +46,4 @@ server/build/*
 **/notes*.md
 **/*.sqlite3
 
+*.env

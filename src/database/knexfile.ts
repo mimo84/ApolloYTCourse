@@ -6,12 +6,11 @@ interface IKnexConfig {
 
 const configs: IKnexConfig = {
   development: {
-    client: 'sqlite3',
+    client: process.env.CLIENT,
     connection: {
-      filename:
-        '/Users/maurizionapoleoni/work/github_repos/ApolloYTCourse/src/database/dev.sqlite3',
+      filename: process.env.FILEPATH as string,
     },
-    debug: true,
+    debug: !!process.env.DB_DEBUG,
     useNullAsDefault: true,
   },
 

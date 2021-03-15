@@ -6,7 +6,7 @@ const generateToken = (id: string, email: string) => {
       id,
       email,
     },
-    'very long json web token pass phrase (){}/=`12',
+    process.env.JWT_PASS as string,
     { expiresIn: '1y' }
   );
 };
